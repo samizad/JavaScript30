@@ -1,0 +1,10 @@
+ا.hand{
+    background-color: black;
+    top: 50%;
+    position: absolute;
+    transform-origin: 100%;
+    transform:rotate(90 deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+
+}
