@@ -1,1 +1,76 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Array Cardio</title>
+</head>
+<script>
+    const investors =[
+        {first:'Ali',last:'Biiuo',year:1879, passed:1955},
+        {first:'Acli',last:'Buiio',year:1643, passed:1727},
+        {first:'Ajjli',last:'Berio',year:1564, passed:1642},
+        {first:'Adsdli',last:'Biero',year:1867, passed:1934},
+        {first:'Alddsdi',last:'Bgfio',year:1571, passed:1630},
+        {first:'Aldsdi',last:'Bigfgo',year:1473, passed:1543},
+        {first:'Aldsddi',last:'Bffgfgio',year:1858, passed:1947},
+    ];
 
+    const people=['asssdsd,asjkjas', 'ereytyrs,dfdtytfs','df,ascvtyas','acvs,asas','acvcvs,asfgfafgs']
+
+    //array people born in 1500s with filter
+    const fifteen = investors.filter(inventor =>{
+        if (inventor.year >=1500  && inventor.year<1600 ){
+            return true;
+        }
+        
+    }) 
+    console.table(fifteen);
+    ///array  of investor first and last name map 
+    const fullName  = investors.map(investor => `${investor.first} ${investor.last}`)
+    console.log(fullName);
+    //sort by birthday
+    const ordered   = investors.sort((a,b)=>a.year>b.year?1:-1);
+    console.table(ordered)
+    // array prototype reduce how many years all live
+    const totalYears = investors.reduce((total, investor)=>{
+        return total+(investor.passed - investor.year);
+
+    },0);
+    console.log(totalYears)
+
+    // sort investors by years lived
+    const oldest    = investors.sort((a,b) => {
+        const earlyGuy = a.passed - a.year;
+        const lastGuy = b.passed - b.year;
+        return lastGuy>earlyGuy?1 :-1;
+    })
+    console.table(oldest)
+    //create a list of boulevards in paris contain "de"
+    // const category  = document.querySelector('.mw-category');
+    // const links  =   [...document.querySelectorAll('a')];
+    // const de= links
+    //                 .map(link=>  link.textContent)
+    //                 .filter(street=> street.includes('de'))
+//sort people alphabetically by lastName
+        const alpha = people.sort((lastOne , nextOne)=>{
+            const [aLast, aFirst] = lastOne.split(', ');
+            const [bLast, bFirst] = nextOne.split(', ');
+            return aLast>bLast? -1:1;
+            
+        } )   
+        console.log(alpha);
+        //reduce exercise
+            //sum up the instance of these
+            const data = ['car','walk','truck','bike','car','car','walk']
+            const transportation    = data.reduce((obj,item)=>{
+                if (!obj[item]){
+                    obj[item]=0;
+                }
+            obj[item]++;
+            return obj;
+
+            }
+            ,{});
+            console.log(transportation)
+
+
+
+</script>
