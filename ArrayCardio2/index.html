@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+    <body>
+<script>
+const people = [
+    {name:'wes',year:1988},
+    {name:'keit',year:1986},
+    {name:'irv',year:1970},
+    {name:'lux',year:2015}
+]
+            const comments = [
+  { text: "love this", id: 423423 },
+  { text: "super good", id: 876423 },
+  { text: "you are the best", id: 976423 },
+  { text: "Ramen in my fav food ever", id: 184423 },
+  { text: "nice nice nice", id: 373423 },
+];
+//some and every
+//array.prototype.some//is at least one person 19?
+const isAdult = people.some(person =>  ((new Date())
+.getFullYear()) - person.year >=19) ;
+console.log(isAdult)
+//array.prototype.every//is everyone19?
+const allAdult = people.every(person =>  ((new Date())
+.getFullYear()) - person.year >=19) ;
+console.log(allAdult)
+//find// like filter but return first item
+//find the comment with id= 373423
+const comment= comments.find(comment => (comment.id === 373423))
+console.log({comment})
+//find index
+const commentIndex= comments.findIndex(comment => (comment.id === 373423))
+console.log(commentIndex)
+//..delete
+comments.splice(commentIndex,1)
+        </script>
+    </body>
+</html>
