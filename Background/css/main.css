@@ -1,0 +1,27 @@
+#app{
+    text-align:center;
+    transition: backgroundColor .2s ease;
+
+}
+#current-color{
+    font-size: clamp(1rem, 9vw, 4rem);
+    margin-top: 150px !important;
+    font-family: monospace;
+    text-shadow: 2px 2px 0 #fff;
+}
+.colors{
+    position: absolute;
+    margin-top: 50px;
+    bottom: 10px;
+    width: 100%;
+}
+div.colors button {
+    margin: 0 10px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    border: 7px solid #fff;
+}
+button.active {
+    border-color: green !important;
+  }
