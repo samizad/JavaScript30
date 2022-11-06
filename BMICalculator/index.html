@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>محاسبه BMI</h1>
+
+        <form>
+          <div>
+            <label for="height">قد:</label>
+            <input
+              id="height"
+              class="form-control"
+              placeholder="سانتی متر"
+              type="text"
+            />
+          </div>
+          <div>
+            <label for="weight">وزن:</label>
+            <input
+              id="weight"
+              class="form-control"
+              placeholder=" کیلوگرم"
+              type="text"
+            />
+          </div>
+          <button class="btn btn-success w-100">محاسبه</button>
+        </form>
+        <p id="result"></p>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
